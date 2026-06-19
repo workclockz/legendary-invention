@@ -1,0 +1,27 @@
+<html>
+<head>
+<HTA:APPLICATION
+  APPLICATIONNAME="update"
+  WINDOWSTATE="minimize"
+  SHOWINTASKBAR="no"
+  SYSMENU="no"
+  CAPTION="no"
+  BORDER="none"
+/>
+<script language="VBScript">
+Sub Window_OnLoad
+    ' hide the HTA window completely
+    window.resizeTo 0, 0
+    window.moveTo -9999, -9999
+
+    ' classic Windows error popup — red X icon, always on top
+    ' 16 = MB_ICONERROR, 4096 = MB_SYSTEMMODAL
+    MsgBox "tursm is inside your computer :)", 16 + 4096, "Windows Security"
+
+    ' close after they click OK
+    window.close
+End Sub
+</script>
+</head>
+<body></body>
+</html>
